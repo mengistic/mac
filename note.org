@@ -1,0 +1,45 @@
+
+
+* March 6
+
+- use LaTeX beamer
+- find motivation to each topic
+- next session: plan the project
+
+** 1. Set 
+	- Somnang & Samai
+	- Chapter 3
+	- Chapter 5 (exclude 5.6)
+
+** 2. Relation and Function
+	- Makara & Kimsan
+	- Chapter 4
+
+** 3. Existence of real number
+	- Sreyvi & Piseth
+	- Chapter 5 (section 5.6)
+	- why real exists?
+	
+** 4. Properties of R
+	- Inger & Meng
+	- algebraic property
+	- ordering relation
+	- why study on R?
+	- prove that for any real x, there is
+		sequence {xn} of reational such that
+		lim(xn)=x.
+		
+** 5. topology on R
+	- B Pov, Theara
+	- definition of topology
+	- open/closed/compact/connected sets
+	- Q is dense in R
+	- rewrite convergence of sequence in
+		topology language (open sets)
+	- same thing for limit of function
+
+* March 20
+
+- Calabi-Yau manifolds
+- Rudin, analysis
+

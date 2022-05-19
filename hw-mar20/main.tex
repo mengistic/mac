@@ -1,0 +1,352 @@
+
+\input{../src/preamble.tex}
+
+\begin{document}
+
+\chapter{Sequence}
+\section{Homework}
+
+% ==> ex1
+\begin{exercise}
+  Let $(a)_n$ and $(b_n)$ be real valued sequences such that
+  $\lim a_n=a$ and $\lim b_n=b$ where $a,b\in\R$. Prove that
+  \begin{enumerate}
+    \item $\lim(a_n+\lambda b_n)=a+\lambda b$, for all $\lambda\in\R$.
+    \item $\lim a_nb_n=ab$.
+    \item $\lim\frac{a_n}{b_n}=\frac{a}{b}$ whenever $b\neq 0$ and 
+      $b_n\neq 0$ for all $n$.
+  \end{enumerate}
+\end{exercise}
+\begin{proof}
+  First we know that $\lim a_n=a$ and $\lim b_n=b$.
+  \begin{enumerate}
+    \item Let $\lambda\in\R$. We want to make
+      \begin{align*}
+        \abs{a_n+\lambda b_n-a-\lambda b}
+        &=\abs{a_n-a + \lambda(b_n-b)}\\
+        &\leq\abs{a_n-a}+\abs{\lambda}\cdot\abs{b_n-b}
+      \end{align*}
+      as small as we want.
+      Let $\epsilon>0$. Because $\lim a_n=a$ and $\lim b_n=b$,
+      there exist $N_1,N_2\in\N$ such that
+      \begin{align*}
+        &\abs{a_n-a}\leq\frac{\epsilon}{2},
+        \qquad\forall n\geq N_1
+        \intertext{and}
+        &\abs{b_n-b}\leq\frac{\epsilon}{2}\cdot\frac{1}{\abs{\lambda}+1},
+        \quad\forall n\geq N_2
+      \end{align*}
+      Note that these two inequalities both hold for all index $n$
+      larger that $\max\{N_1, N_2\}$. Letting $N=\max\{N_1,N_2\}$,
+      hence $\forall n\geq N$, we have
+      \begin{align*}
+        \abs{a_n+\lambda b_n-a-\lambda b}
+        &\leq\abs{a_n-a}+\abs{\lambda}\cdot\abs{b_n-b}\\
+        &\leq\frac{\epsilon}{2}+\frac{\abs{\lambda}}{\abs{\lambda}+1}\cdot\frac{\epsilon}{2}\\
+        &<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon.
+      \end{align*}
+      This shows that $\lim(a_n+\lambda b_n)=a+\lambda b$.
+
+    \item Observe that
+      \begin{align*}
+        \abs{a_nb_n-ab}
+        &=\abs{a_nb_n-a_nb+a_nb-ab}\\
+        &\leq\abs{a_n}\abs{b_n-b}+\abs{b}\abs{a_n-a}.
+      \end{align*}
+      As we'll soon prove (in later exercise) that a convergent 
+      sequence is bounded, hence there is $M>0$ such that $\abs{a_n}<M$
+      for all $n\in\N$. Now we can preceed the proof the same fashion as
+      in the previous exercise, so I am going to omit the part 
+      $\max\{N_1,N_2\}$ for simplicity's sake.
+
+      Let $\epsilon>0$. Because $\lim a_n=a$ and $\lim b_n=b$, there is
+      a shared integer $N\in\N$ for which the inequalities
+      \begin{align*}
+        &\abs{a_n-a}\leq\frac{1}{\abs{b}+1}\cdot\frac{\epsilon}{2}\\
+        &\abs{b_n-b}\leq\frac{\epsilon}{2M}
+      \end{align*}
+      both hold for all $n\geq N$. Therefore, for any $n\geq N$,
+      \begin{align*}
+        \abs{a_nb_n-ab}
+        &\leq\abs{a_n}\abs{b_n-b}+\abs{b}\abs{a_n-a}\\
+        &\leq M\abs{b_n-b}+\abs{b}\abs{a_n-a}\\
+        &\leq M\cdot\frac{\epsilon}{2M}+\frac{\abs{b}}{\abs{b}+1}\cdot\frac{\epsilon}{2}\\
+        &< \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon
+      \end{align*}
+      Thus $\boxed{\lim a_nb_n=ab.}$
+
+    \item First, we claim that $\lim\frac{1}{b_n}=\frac{1}{b}$. 
+      Observe that
+      \[
+        \abs*{\frac{1}{b_n}-\frac{1}{b}}
+        =\frac{1}{\abs{b_n}\abs{b}}\cdot\abs{b_n-b}
+      \]
+      So we need to find the upper bound of $\frac{1}{\abs{b_n}}$, i.e.
+      the lower bound of $\abs{b_n}$.
+      Becase $\lim b_n=b\neq 0$, we can choose $\epsilon:=\frac{\abs{b}}{2}$
+      in the definition of the convergent $b_n$, hence there exists 
+      $N_1\in\N$ such that for any $n\geq N_1$, the inequality 
+      $\abs{b_n-b}\leq \frac{\abs{b}}{2}$ hold. From Triangle Inequality,
+      \[
+        \abs{b}\leq \abs{b-b_n}+\abs{b_n}\leq\frac{\abs{b}}{2}+\abs{b_n}
+      \]
+      this shows that $\abs{b_n}\geq \frac{\abs{b}}{2}$. So we found that
+      $\frac{1}{\abs{b}\abs{b_n}}\leq\frac{2}{\abs{b}^2}$ for each 
+      $n\geq N_1$.
+
+      \quad Now let us fix an $\epsilon>0$. Because $\lim b_n=b$, 
+      there is $N_2\in\N$ such that 
+      \[
+        \abs{b_n-b}\leq\frac{\abs{b}^2}{2}\cdot\epsilon
+      \]
+      for all $n\geq N_2$. Letting $N=\max\{N_1,N_2\}$, we obtain that
+      for each $n\geq N$,
+      \[
+        \abs*{\frac{1}{b_n}-\frac{1}{b}}
+        =\frac{1}{\abs{b_n}\abs{b}}\cdot\abs{b_n-b}\\
+        \leq \frac{2}{\abs{b}^2}\cdot\frac{\abs{b}^2}{2}\cdot\epsilon
+        =\epsilon
+      \]
+      Now, we can finish the proof by writing
+      \[
+        \lim\frac{a_n}{b_n}=\lim a_n\cdot\frac{1}{b_n}=a\cdot\frac{1}{b}=
+        \frac{a}{b}.
+      \]
+  \end{enumerate}
+\end{proof}
+% <==
+% ==> ex2
+\begin{exercise}
+  Let $(a_n)$ be a divergent sequence. Prove that 
+  $\lim\frac{1}{a_n}=0$.
+\end{exercise}
+\begin{proof}
+  First fix an $\epsilon>0$. Because $(a_n)$ diverges,
+  then there exists $N\in\N$ such that $\forall n\geq N$,
+  $\abs{a_n}>\frac{1}{\epsilon}$. This implies that
+  \[ \abs*{\frac{1}{a_n}}< \epsilon. \]
+  Hence $\lim a_n=0$ as expected.
+\end{proof}
+% <==
+% ==> ex3
+\begin{exercise}
+  If a sequence converges, prove that its limit is unique.
+\end{exercise}
+\begin{proof}
+  Let $(a_n)$ be a convergent sequence, and suppose that $a,a_0\in\R$ 
+  be its limit. To prove that its limit is unique, we want to show that 
+  $a=a_0$. Assume by the contrary that $a\neq a_0$, by the definition 
+  of convergent sequence, we can choose 
+  $\epsilon:=\frac{\abs{a-a_0}}{2}\neq 0$
+  so there's an $N\in\N$ such that both inequalities
+  \[
+    \abs{a_n-a}< \frac{\abs{a-a_0}}{2}
+    \quad\text{and}\quad
+    \abs{a_n-a_0}< \frac{\abs{a-a_0}}{2}
+  \]
+  hold for all $n\geq N$. Using Triangle Inequality, we get
+  \begin{align*}
+    \abs{a-a_0}
+    &=\abs{a-a_n+a_n-a_0}\\
+    &\leq \abs{a_n-a}+\abs{a_n-a_0}\\
+    &< \frac{\abs{a-a_0}}{2}+\frac{\abs{a-a_0}}{2}\\
+    &=\abs{a-a_0}
+  \end{align*}
+  a contradiction. Therefore, we must have that $a=a_0$.
+\end{proof}
+% <==
+% ==> ex4
+\begin{exercise}
+  Prove that a convergent sequence is bounded. Is the converse true?
+\end{exercise}
+\begin{proof}
+  Let  $(a_n)$ converges to $a\in\R$.
+  From definition, we can choose $\epsilon=1$ , then
+  there's $N\in\N$ for which $\abs{a_n-a}<\epsilon=1$ holds for 
+  all $n\geq N$. Therefore, for all $n\geq N$
+  \[
+    \abs{a_n}=\abs{a_n-a+a}\leq\abs{a_n-a}+\abs{a}<1+\abs{a}.
+  \]
+  Now, we let
+  \[
+    M=\max\{
+      \abs{a_0},\abs{a_1},\dots,\abs{a_{N-1}},
+      1+\abs{a}
+    \}
+  \]
+  this simply shows that $\abs{a_n}\leq M$ for all $n\in\N$.
+  Hence $(a_n)$ is bounded.
+  The converse statement is not generally true. Take for example the
+  sequence $(a_n): 1,-1,1,-1,\dots $ is a bounded sequence yet 
+  it failed to have a limit.
+\end{proof}
+% <==
+% ==> ex5
+\begin{exercise}
+  Prove that the convergence of $(a_n)$ implies the convergence
+  of $\abs{a_n}$. Is the converse true?
+\end{exercise}
+\begin{proof}
+  Suppose that $(a_n)$ converges to $a\in\R$. We claim that
+  $\lim\abs{a_n}=\abs{a}$. Let $\epsilon>0$ be an arbitrary
+  positive real number. Because $\lim a_n=a$, there is 
+  $N\in\N$ such that for all $n\geq N$, $\abs{a_n-a}<\epsilon$.
+  Using triangle inequality, we get
+  \[
+    \abs{\abs{a_n}-\abs{a}}\leq \abs{a_n-a}<\epsilon
+  \]
+  for all $n\geq N$. This proves that $\lim\abs{a_n}=\abs{a}$.
+
+  The converse is not generally true. In fact, we can find a counter
+  example to disprove the claim. Consider the sequence $a_n=(-1)^n$.
+  It's easy to see that $\abs{a_n}=1$ converges, yet $a_n$
+  diverges.
+\end{proof}
+% <==
+% ==> ex6
+\begin{exercise}
+  Prove the density of $\Q$ in $\R$, i.e. that is to prove that
+  for every $a,b\in\R$ with $a<b$, there is $q\in\Q$ such that
+  $a<q<b$.
+\end{exercise}
+\begin{proof}
+  %It's enough for us to prove for only the case when $0<a<b$ 
+  %because if $a<b<0$, then $0<-b<-a$. And if $a<0<b$, then there'll
+  %be rational between $0$ and $b$ which also lies in $(a,b)$.
+  Without loss of generality, we can assume that
+  $0<a<b$. From Archimedean property, 
+  we can find $n\in\N$ such that $n>\frac{1}{b-a}$ or
+  \[\frac{1}{n}<b-a.\]
+  Let us define $K=\{k\in\N~:~\frac{k}{n}\leq a\}$ and let $m:=\max K$. 
+  Therefore, $\frac{m}{n}\leq a$, and since $m$ is the maximal element, 
+  it's next term must not in the set $K$, in other words 
+  $m+1\notin K$. Hence
+  \begin{align*}
+    a<\frac{m+1}{n}=\frac{m}{n}+\frac{1}{n}< a+(b-a)=b
+  \end{align*}
+  We had just found $m,n\in\N$ such that $a<\frac{m+1}{n}<b$.
+  This proves that there's a rational between any two real numbers.
+\end{proof}
+% <==
+% ==> ex7
+\begin{exercise}
+  Prove the following via the definition of convergence:
+  \begin{enumerate}
+    \item $\lim\frac{2n+1}{n-2}=2$
+    \item $\lim\frac{\sqrt{n-1}}{\sqrt{n}+1}=1$
+    \item $\lim\frac{\sqrt[3]{n^3-3}}{2n}=\frac{1}{2}$
+    \item $\lim\frac{2\sqrt{n}+3}{n-3}=0$
+    \item $\lim(n-\sqrt{n})=\infty$.
+  \end{enumerate}
+\end{exercise}
+\begin{proof}
+  Prove the following limits via definition:
+  \begin{enumerate}
+    \item Let us fix $\epsilon>0$. Using Archimedean property, 
+      there is $N\in\N$ such that $N>\frac{5}{\epsilon}+2$ or
+      \[\frac{5}{N-2}<\epsilon.\]
+      It's also clear that $N>2$. Hence for any $n\geq N$,
+      \begin{align*}
+        \abs*{\frac{2n+1}{n-2}-2}
+        &=\abs*{\frac{2n+1-2n+4}{n-2}}\\
+        &=\abs*{\frac{5}{n-2}} =\frac{5}{n-2}  
+        && \text{(because $n>2$)}\\
+        &\leq \frac{5}{N-2}
+        && \text{(because $n\geq N$)}\\
+        &<\epsilon
+      \end{align*}
+
+    \item First we claim that 
+      $\displaystyle
+      \abs*{\frac{\sqrt{n-1}}{\sqrt{n}+1}-1}<\frac{1}{\sqrt{n}}$
+      for all $n\in\N$ greater than $1$.
+      For any $n>1$, we have
+      \begin{align*}
+        &(n-1)^2<n(n-1)\\\implies\quad
+        &n-1<\sqrt{n(n-1)}\\\implies\quad
+        &n-\sqrt{n(n-1)}+\sqrt{n}<1+\sqrt{n}\\\implies\quad
+        &\frac{\sqrt{n}-\sqrt{n-1}+1}{1+\sqrt{n}}<\frac{1}{\sqrt{n}}\\\implies\quad
+        &1-\frac{\sqrt{n-1}}{\sqrt{n}+1}<\frac{1}{\sqrt{n}}
+      \end{align*}
+      Note also that 
+      $\displaystyle\frac{n-1}{\sqrt n-1}-1
+      =\frac{\sqrt{n-1}-\sqrt{n}-1}{\sqrt{n}+1}<0$, then we must have
+      \[
+        \abs*{\frac{\sqrt{n-1}}{\sqrt{n}+1}-1}=
+        1-\frac{\sqrt{n-1}}{\sqrt{n}+1}<\frac{1}{\sqrt{n}}
+      \]
+      as claimed. Now fix an $\epsilon>0$. By Archimedean property,
+      there is $N\in\N$ such that 
+      $N>\frac{1}{\epsilon^2}$. Therefore for all $n\geq N$,
+      \[
+        \abs*{\frac{\sqrt{n-1}}{\sqrt{n}+1}-1}<\frac{1}{\sqrt n}
+        \leq\frac{1}{\sqrt N}<\epsilon.
+      \]
+      Thus, $\boxed{\displaystyle\lim\frac{\sqrt{n-1}}{\sqrt n+1}=1}$.
+
+    \item As before, we first claim that
+      $\displaystyle\abs*{\frac{\sqrt[3]{n^3-3}}{n}-1}<\frac{3}{n^3}$
+      for any $n>2$.
+
+      Observe that if $n>2$ then $n^3>3\Rightarrow 1-\frac{3}{n^3}>0$.
+      It's also easy to see that $\sqrt[3]{n^3-3}<n$, and hence
+      \begin{align*}
+        \abs*{\frac{\sqrt[3]{n^3-3}}{n}-1}
+        &=1-\frac{\sqrt[3]{n^3-3}}{n}\\
+        &=1-\sqrt[3]{1-\frac{3}{n^3}}\\
+        &=\frac{1-(1-\frac{3}{n^3})}{1+\sqrt[3]{a}+\sqrt[3]{a^2}},
+        &&\text{where $a=1-\frac{3}{n^3}>0$}\\
+        &<\frac{3}{n^3}
+      \end{align*}
+      for any $n>2$ as expected. Now fix $\epsilon>0$. By Archimedean 
+      property there's $N\in\N$ such that 
+      $N\geq \sqrt[3]{\frac{3}{2\epsilon}}$. Thus for any 
+      $n\geq\max\{2,N\}$, we have
+      \begin{align*}
+        \abs*{\frac{\sqrt[3]{n^3-3}}{2n}-\frac{1}{2}}
+        <\frac{3}{2n^3}\leq\frac{3}{2N^3}<\epsilon.
+      \end{align*}
+      Therefore, $\boxed{\lim\frac{\sqrt[3]{n^3}-3}{2n}=\frac{1}{2}.}$
+
+    \item Note that for any $n\geq 10$, we have
+      \begin{align*}
+        \frac{2\sqrt{n}+3}{n-3}
+        <\frac{2\sqrt{n}+6}{n-9}
+        =\frac{2}{\sqrt{n}-3}
+      \end{align*}
+      Fix an $\epsilon>0$. From Archimedean property, there
+      is $N\in\N$ such that 
+      \[ N\geq \left(3+\frac{2}{\epsilon}\right)^2. \]
+      Thus for any $n\geq\max\{10, N\}$ we obtain that
+      \begin{align*}
+        \abs*{\frac{2\sqrt{n}+3}{n-3}}
+        <\frac{2}{\sqrt{n}-3}
+        <\frac{2}{\sqrt{N}-3}<\epsilon.
+      \end{align*}
+      Hence, \quad
+      $\boxed{\lim\frac{2\sqrt{n}+3}{\sqrt{n}-3}=0}$.
+
+    \item Let $\epsilon>0$, and let 
+      $a_n:=n-\sqrt{n}=\sqrt{n}(\sqrt{n}-1)$.
+      It's clear that $(a_n)$ is an increasing sequence.
+      Also, we have
+      \[ n-\sqrt{n}=\left(\sqrt{n}-\frac{1}{2}\right)^2-\frac{1}{4},\]
+      then from Archimedean property, there is $N\in\N$ such that
+      \[N> \left(\frac{1}{2}+\sqrt{\epsilon+\frac{1}{4}}\right)^2.\]
+      Thus, for any $n\geq N$, we have
+      \begin{align*}
+        \abs{a_n}
+        &=n-\sqrt n\geq N-\sqrt N\\
+        &=\left(\sqrt{N}-\frac{1}{2}\right)^2-\frac{1}{4}
+        >\epsilon
+      \end{align*}
+      Therefore, $\boxed{\lim (n-\sqrt n)=\infty.}$
+  \end{enumerate}
+\end{proof}
+% <==
+
+
+
+
+
+\end{document}

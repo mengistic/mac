@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Algebraic Properties}{4}{0}{2}
+\beamer@sectionintoc {3}{Ordering Properties}{7}{0}{3}
+\beamer@sectionintoc {4}{Completeness Property}{9}{0}{4}
+\beamer@sectionintoc {5}{Why do Analysis on $\mathbb R$}{12}{0}{5}
+\beamer@sectionintoc {6}{Some important results}{13}{0}{6}

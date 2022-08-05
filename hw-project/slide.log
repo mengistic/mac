@@ -1,11 +1,11 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.4.21)  28 APR 2022 17:52
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.5.12)  4 AUG 2022 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **slide.tex
 (./slide.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-02-24>
+L3 programming layer <2022-04-10>
 (/usr/share/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2022/02/08 v3.66 A class for typesetting presentations
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
@@ -177,7 +177,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: xetex.def on input line 107.
 
 (/usr/share/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
+File: xetex.def 2022/04/12 v5.0l Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen173
 \Gin@req@width=\dimen174
@@ -835,46 +835,43 @@ LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
 )
 (/usr/share/texmf-dist/tex/latex/beamer/beamerinnerthemecircles.sty))
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
-File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
-
-(|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count355
-\l__color_backend_stack_int=\count356
-\g__color_backend_stack_int=\count357
-\g__graphics_track_int=\count358
+File: l3backend-xetex.def 2022-04-14 L3 backend support: XeTeX
+\l__color_backend_stack_int=\count355
+\g__color_backend_stack_int=\count356
+\g__graphics_track_int=\count357
 \l__pdf_internal_box=\box127
-\g__pdf_backend_object_int=\count359
-\g__pdf_backend_annotation_int=\count360
-\g__pdf_backend_link_int=\count361
+\g__pdf_backend_object_int=\count358
+\g__pdf_backend_annotation_int=\count359
+\g__pdf_backend_link_int=\count360
 ) (./slide.aux)
 \openout1 = `slide.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
+6.
 
 (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -910,7 +907,7 @@ LaTeX Font Info:    ... okay on input line 13.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 13.
+Package hyperref Info: Link coloring OFF on input line 26.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -920,58 +917,58 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count362
+\c@section@level=\count361
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
 
 (./slide.out) (./slide.out)
 \@outlinefile=\write5
 \openout5 = `slide.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 13.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 13.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 26.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 13.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 13.
+(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmss/b/n on input line 13.
+(Font)                  OT1/cmr/bx/n --> TU/lmss/b/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmss/b/n on input line 13.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 13.
+(Font)                  OT1/cmr/bx/n --> TU/lmss/b/n on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 13.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/m/n on input line 13.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 13.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/m/n on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmss/m/it on input line 13.
+(Font)                  OT1/cmr/m/it --> TU/lmss/m/it on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmss/m/it on input line 13.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 13.
+(Font)                  OT1/cmr/bx/it --> TU/lmss/m/it on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 13.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 13.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 13.
+(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  TU/lmss/m/it --> TU/lmss/b/it on input line 13.
+(Font)                  TU/lmss/m/it --> TU/lmss/b/it on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> TU/lmr/b/n on input line 13.
+(Font)                  OT1/cmss/b/n --> TU/lmr/b/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  TU/lmss/b/n --> TU/lmss/b/n on input line 13.
+(Font)                  TU/lmss/b/n --> TU/lmss/b/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 13.
+(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/lmss/m/it --> TU/lmss/b/it on input line 13.
+(Font)                  TU/lmss/m/it --> TU/lmss/b/it on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 13.
+(Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 26.
 
 (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English
 .dict
@@ -998,114 +995,283 @@ sh.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 ) (./slide.nav)
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 13.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 26.
 File: ../pic/mac.jpg Graphic file (type bmp)
 <../pic/mac.jpg>
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <9> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 18.
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 32.
  [1
 
 ] (./slide.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 5.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 2.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <8> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 5.
-LaTeX Font Info:    Trying to load font information for U+bbold on input line 5
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 2.
+LaTeX Font Info:    Trying to load font information for U+bbold on input line 2
 .
 
-(/usr/share/texmf-dist/tex/latex/bbold/Ubbold.fd))
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
- [2
+(/usr/share/texmf-dist/tex/latex/bbold/Ubbold.fd)) [2
+
+] [3
+
+] [4
 
 ]
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
- [3
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 51.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 51.
+
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <20.74> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 56.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 56.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <12> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 56.
+[5
 
 ]
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
- [4
-
-]
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
- [5
-
-]
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <5> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 64.
  [6
 
-]
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
- [7
+] [7
 
 ]
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 78.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 78.
 
 [8
 
-]
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
- [9
+] [9
+
+] [10
+
+] [11
 
 ]
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
- [10
-
-]
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
- [11
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 221.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 221.
-
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 231.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 231.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 119.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 231.
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <5> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 231.
-[12
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 119.
+ [12
+
+] [13
+
+] [14
+
+] [15
+
+] [16
+
+] [17
+
+] [18
+
+] [19
+
+] [20
+
+] [21
+
+] [22
 
 ]
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
- [13
+[23
+
+] [24
 
 ]
-File: ../pic/mac.jpg Graphic file (type bmp)
-<../pic/mac.jpg>
- [14
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 163.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 163.
+
+[25
+
+] [26
+
+] [27
+
+] [28
+
+] [29
+
+] [30
+
+] [31
+
+] [32
+
+] [33
+
+]
+File: converge.pdf Graphic file (type pdf)
+<use converge.pdf>
+ [34
+
+]
+File: converge.pdf Graphic file (type pdf)
+<use converge.pdf>
+ [35
+
+]
+File: converge.pdf Graphic file (type pdf)
+<use converge.pdf>
+ [36
+
+]
+File: converge.pdf Graphic file (type pdf)
+<use converge.pdf>
+ [37
+
+] [38
+
+] [39
+
+]
+[40
+
+] [41
+
+] [42
+
+] [43
+
+] [44
+
+] [45
+
+] [46
+
+] [47
+
+] [48
+
+] [49
+
+] [50
+
+] [51
+
+] [52
+
+] [53
+
+] [54
+
+]
+[55
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 433.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 433.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 433.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 433.
+
+[56
+
+] [57
+
+] [58
+
+] [59
+
+] [60
+
+] [61
+
+] [62
+
+] [63
+
+] [64
+
+] [65
+
+] [66
+
+] [67
+
+] [68
+
+] [69
+
+] [70
+
+]
+[71
+
+] [72
+
+] [73
+
+] [74
+
+] [75
+
+] [76
+
+] [77
+
+] [78
+
+] [79
+
+] [80
+
+] [81
+
+] [82
+
+] [83
+
+] [84
+
+] [85
+
+]
+[86
+
+] [87
+
+] [88
+
+] [89
+
+] [90
 
 ]
 \tf@nav=\write6
@@ -1119,15 +1285,15 @@ File: ../pic/mac.jpg Graphic file (type bmp)
 
  (./slide.aux)
 Package rerunfilecheck Info: File `slide.out' has not changed.
-(rerunfilecheck)             Checksum: A858F0A38FD61B3D33DB7E90EA6A80AA;855.
+(rerunfilecheck)             Checksum: 414B6AE4ED1928DA0298748354EC61B7;908.
  ) 
 Here is how much of TeX's memory you used:
- 25362 strings out of 476180
- 504322 string characters out of 5815297
- 770640 words of memory out of 5000000
- 45562 multiletter control sequences out of 15000+600000
- 479891 words of font info for 91 fonts, out of 8000000 for 9000
+ 25487 strings out of 476156
+ 506320 string characters out of 5814963
+ 773667 words of memory out of 5000000
+ 45706 multiletter control sequences out of 15000+600000
+ 483389 words of font info for 108 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 128i,15n,122p,440b,770s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,15n,122p,418b,959s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slide.pdf (14 pages).
+Output written on slide.pdf (90 pages).

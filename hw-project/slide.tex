@@ -1,274 +1,605 @@
 \documentclass{beamer}
-% ==> preamble
+
 \input{../src/mac.tex}
-\def\Rp{\mathbb{R}^{+}}
+%\usepackage{asymptote}
+%\def\asydir{asydir}
+% ==> preamble
+
+%\usefonttheme[onlymath]{serif}
+%\setbeamertemplate{navigation symbols}{}
+%\usetheme{EastLansing}
+%\usecolortheme{seagull}
+%\setbeamertemplate{headline}{}
+%\setbeamertemplate{footline}[frame number]{}
+
+
 
 \usepackage{multicol}
-\title{Properties of Real Numbers}
-\author{Jeng Inger, Hun Sivmeng}
-\date{14 March 2022}
+\usepackage{tikz}
+\title{\bfseries Properties of Real Numbers}
+\author{Inger Jeng, Sivmeng HUN}
+\institute{Student of MAC: Cohort II}
+\date{08 August 2022}
 % <==
 
 
 \begin{document}
 
+
 % ==> title
-\begin{frame}
+\begin{frame}[plain]
   \maketitle
 \end{frame}
-\begin{frame}[b]
+\begin{frame}[plain]{Content}
   \tableofcontents
 \end{frame}
 % <==
 % ==> intro
+\begin{frame}[plain]
+  \begin{center}
+    {\huge\color{blue} Introduction}
+  \end{center}
+\end{frame}
 \section{Introduction}
-\begin{frame}{Discussion}
-  Suppose we want to solve $x^2-2=0$ in the field $\Q$.
-  It turns out that this equation has no roots in $\Q$.
-  So we need to extend this field to a new one --- 
-  a \emph{better} one, called the set of real numbers and
-  is denoted by $\R$.\\[0.3cm]
-  %
-  What are the properties of this new set $\R$, and how
-  do we extend this exactly? \\[0.3cm]
-  %
-  But before we proceed, we ask the audience to forget
-  all the properties of $\R$ we learned in highschool 
-  because we're going to start from the bottom up.\\[0.3cm]
-  %
-  First, because $\R$ is an extension of $\Q$, thus $\R$
-  must inherit all the properties of $\Q$.
-  %
-  %We already know the set $\Q$ of rational numbers.
-  %However, it turns out that not all numbers are rational
-  %(take $\sqrt 2$ for instance.)\\[0.3cm]
-  %%
-  %So we need to extend $\Q$ to a new and bigger set.
-  %We call the new set $\R$ --- the set of real numbers. 
-  %What properties should this new set have? \\[0.3cm]
-  %%
-  %Following slides, we present the properties of $\R$.
-  %First, because $\Q$ is an ordered field, so must be $\R$.
+\begin{frame}{Introduction}
+  From previous group presentation we have constructed the
+  set $\R$ from $\Q$. Now, we turn our attention to study and 
+  explore some properties of $\R$.
 \end{frame}
 % <==
+% ==> field
+\section{$\R$ is an Ordered Field}
+\begin{frame}[plain]
+  \begin{center}
+    {\huge\color{blue} $\R$ is an Ordered Field}
+  \end{center}
+\end{frame}
 % ==> algebraic
-\section{Algebraic Properties}
-% ==> addition
 \begin{frame}{Algebraic Properties}
-  The set $\R$ has the following algebraic properties:
-  \begin{block}{Algebraic Properties (Addition)}
-    \begin{enumerate}
-      \item \textit{(closed):}
-        $a+b\in\R$
-      \item \textit{(commutative):}
-        $a+b=b+a$
-      \item \textit{(associative):}
-        $a+(b+c)=(a+b)+c$
-      \item \textit{(additive identity):}
-        $\exists 0\in\R,\forall a\in\R:~ 0+a=a$
-      \item \textit{(additive inverse):}
-        $\forall a\in\R,~\exists a'\in\R:~ a+a'=0$.
-    \end{enumerate}
-  \end{block}
+  We won't talk much the detail here because it was already presented.
+  Basically $\R$ has two operations, namely that of addition $(+)$ and
+  multiplication $(\times)$. This makes $(\R, +,\times)$ a \emph{field.}
+  In other words, $(\R,+)$ and $(\R^{\ast},\times)$ are Abelian groups.
+
 \end{frame}
-% <==
-% ==> multiplication
-\begin{frame}
-  \begin{block}{Algebraic Properties (Multiplication)}
-    \begin{enumerate}
-      \item \textit{(closed):}
-        $ab\in\R$
-      \item \textit{(commutative):}
-        $ab=ba$
-      \item \textit{(associative):}
-        $a(bc)=(ab)c$
-      \item \textit{(multiplicative identity):}
-        $\exists 1\in\R,\forall a\in\R:~ a\cdot 1=a$
-      \item \textit{(multiplicative inverse):}
-        $\forall a\in\R,a\neq 0,~\exists a^{*}\in\R:~ aa^{*}=1$
-      \item \textit{(distributive law): }
-        $a(b+c)=ab+bc$.
-    \end{enumerate}
-  \end{block}
-  Thus, $\R$ is a field with two operations, namely 
-  \textit{addition} and \textit{multiplication}.
-\end{frame}
-% <==
-% ==> application
-\begin{frame}
-  From this algebraic properties, we can prove the basic arithmetic
-  we learned in highschool with ease. 
-  \begin{lemma}
-    \begin{itemize}
-      \item additive identity/inverse is unique
-      \item multiplicative identity/inverse is unique
-      \item $x+a=y+a \iff x=y$
-      \item $a\cdot 0=0$
-      \item $-a=(-1)\cdot a$
-      \item $ab=0 \iff a=0\text{ or }b=0$
-    \end{itemize}
-  \end{lemma}
-\end{frame}
-% <==
 % <==
 % ==> ordering
-\section{Ordering Properties}
 \begin{frame}{Ordering Properties}
-  There is a non-empty subset of $\R$, called
-  the set of positive real numbers which is denoted
-  by $\Rp$. This set has the properties:
+  The ordering of $\R$ is the same as those in $\Q$.
+  Moreover, $(\R, \leq)$ is an ordered field and also an extension
+  from $(\Q, \leq)$.\\[0.3cm]
   %
-  \begin{block}{Ordering Properties}
-    \begin{itemize}
-      \item if $a\in\R$, then $a\in\Rp$ or $a=0$ or $-a\in\Rp$;
-      \item if $a,b\in\Rp$ then $a+b\in\Rp$;
-      \item if $a,b\in\Rp$ then $ab\in\Rp$.
-    \end{itemize}
+  (working on it)
+\end{frame}
+
+% <==
+% <==
+% ==> uncount
+\section{Uncountabiliy of $\R$}
+
+\begin{frame}[plain]
+  \begin{center}
+    {\huge\color{blue} Uncountabiliy of $\R$}
+  \end{center}
+\end{frame}
+% ==> definition
+\begin{frame}{Countable and Uncountable}
+  Let's recall the definition of countable sets.
+  \pause
+  \begin{definition}
+    A set $S\subseteq\R$ is said to be countable if there
+    exist a bijection $f$ from $\N$ to $S$.
+    A set is called uncountable if it's not countable.
+  \end{definition}
+  \pause
+  As shown in Group 3, the set $\Q$ is countable. 
+  How about the set $\R$? 
+\end{frame}
+% <==
+% ==> (0,1) uncount
+\begin{frame}{$(0,1)$ is uncountable}
+  \pause
+  \begin{lemma}
+    The interval $(0,1)$ is uncountable.
+  \end{lemma}
+  \pause
+  \begin{block}{Proof.}
+    We'll prove this by contradiction.
+    \pause
+    Assume on the contrary that $(0,1)$ is countable, hence
+    there's a bijection map $f:\N\to (0,1)$. 
+    \pause
+    Thus every number in $(0,1)$ can be enumerated (listed) 
+    in a table below. \\[0.3cm]
+    \pause
+    %
+    The idea is to produce a number in $(0,1)$ that is not already
+    placed on the table shown below.
+  \end{block}
+\end{frame}
+\begin{frame}[plain]
+  \begin{block}{(continued)}
+    \begin{center}
+      \begin{tabular}{l|l}
+        $n$ & \multicolumn{1}{c}{$f(n)$}\\\hline
+        1   & 0.\textcolor{blue}{1}12212411 $\dots$ \\
+        2   & 0.0\textcolor{blue}{9}3240987 $\dots$ \\
+        3   & 0.58\textcolor{blue}{7}103941 $\dots$ \\
+        4   & 0.314\textcolor{blue}{4}14391 $\dots$ \\
+        5   & 0.0981\textcolor{blue}{3}2081 $\dots$ 
+        %6   & 0.69841\textcolor{blue}{0}012 $\dots$ 
+      \end{tabular}
+    \end{center}
+    \pause
+    Let $N=0.a_1a_2a_3a_4\dots$ where the $n$-th digit of $N$, namely $a_n$,
+    is found by adding $1$ to the $n$-th digit of $f(n)$ in modulo $10$.
+    \pause
+    Thus, according to the table above we found
+    \[ N=0.20854\dots \]
+    \pause
+    And from this construction, we see that $N\neq f(n)$ for all $n\in\N$.
+  \end{block}
+\end{frame}
+\begin{frame}[plain]
+  \begin{block}{(continued)}
+    Thus this $N\in(0,1)$ is no where to be found in the table,
+    a contradiction.\\[0.3cm]
+
+    This shows that the interval $(0,1)$ is uncountable.
   \end{block}
 
-  We then define relations $<,~\leq,~>$ and $~\geq$  as follows: 
+  \pause
+  Now because $(0,1)\subset\R$, we conclude that $\R$ is also uncountable.
+  We have established the following theorem:
+  \pause
+  \begin{theorem}
+    The set $\R$ is uncountable.
+  \end{theorem}
+
+\end{frame}
+% <==
+% <==
+% ==> completeness
+\section{Completeness of $\R$}
+\begin{frame}[plain]
+  \begin{center}
+    {\huge\color{blue} Completeness of $\R$}
+  \end{center}
+\end{frame}
+% ==> what is completeness
+\begin{frame}
+  What does \emph{completeness of $\R$} mean?
+  \pause
+  (Spoiler Alert ...) 
+  \begin{theorem}[Completeness of $\R$]
+    \pause Every Cauchy sequence converges.
+  \end{theorem}
+  \pause
+  Let's first ask ourselves: \pause
   \begin{itemize}
-    \item $a>b$ whenever $a-b\in\Rp$;
-    \item $a\geq b$ whenever $a>b$ or $a=b$;
-    \item $b<a$ whenever $a>b$;
-    \item $b\leq a$ whenever $a\geq b$;
+    \item What is a \emph{sequence}?\pause
+    \item What does it mean to \emph{converge}?\pause
+    \item What is a \emph{Cauchy sequence}?\pause
   \end{itemize}
+
+  So, first let's talk about sequence and convergence.
+
+\end{frame}
+% <==
+% ==> def of convergence
+\begin{frame}{Sequence}
+
+  A sequence is a real valued-function whose domain is $\N$.
+  The most crucial part of the study of sequence is that of 
+  convergence.\\[0.3cm]
+  \pause
+  What should the definition of convergence be?\\[0.3cm]
+  \pause
+  Intuitively, convergence means $a_n$ gets 
+  \emph{arbitrarily} close to a value $L$ for large enough $n$.
+  \\[0.3cm]\pause
+
+  \begin{center}
+    \includegraphics[scale=0.8]{converge.pdf}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}{Absolute Value}
+  We define the absolute value by
+  \[
+    \abs{x}=
+    \begin{cases}
+      x &\text{if }x\geq 0;\\
+      -x &\text{if }x<0
+    \end{cases}
+  \]
+  The distance from $x$ to $y$ is given by $\abs{x-y}$.
+  These are some properties of absolute value.
+  \begin{block}{Properties}
+    \begin{itemize}
+      \item $\abs{x}\geq 0$
+      \item $\abs{x+y}\leq \abs{x}+\abs{y}$
+      \item $\abs{x-y}\geq \abs*{\abs{x}-\abs{y}}$
+    \end{itemize}
+  \end{block}
+  %\begin{center}
+  %\begin{tikzpicture}
+  %\draw (-2,0)--(2,0);
+  %\draw (-1,-0.1) node[below]{$x$}--(-1,0);
+  %\draw (1.5,-0.1) node[below]{$y$}--(1.5,0);
+  %\end{tikzpicture}
+  %\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Convergence}
+  Okay, we have the language of distance. 
+  The phrase ``$a_n$ is close to $L$'' can then be expressed by
+  $\abs{a_n-L}<\epsilon$ for any small $\epsilon$.\\[0.3cm]
+
+  Note that we only require it's true for larger and larger $n$.
+  With all the ingredients at hand, we now present the
+
+  \begin{definition}[Convergence]
+    A sequence $(a_n)$ is said to converge to $L\in\R$ if 
+    $\forall\epsilon>0,~ \exists N\in\N$ such that
+    $\abs{a_n-L}<\epsilon$ for all $n\geq N$.
+  \end{definition}
+
+\end{frame}
+% <==
+% ==> monotone convergence
+%\begin{frame}{Monotone Convergence}
+  %%
+  %Now how can we say for sure if a given sequence converge? The 
+  %following theorem illustrates this.
+  %\pause
+  %%
+  %\begin{theorem}
+    %Let $(a_n)$ be a monotonic sequence. If $(a_n)$ is bounded,
+    %then $(a_n)$ converges.
+  %\end{theorem}
+%\end{frame}
+%\begin{frame}[plain]
+  %\begin{proof}
+    %We prove for the case when $(a_n)$ is an decreasing one, 
+    %whereas the other case is proved similarly.  \\[0.3cm]
+    %\pause
+
+    %Now because $(a_n)$ is decreasing, the set $\{a_n~:~n\in\N\}$
+    %has its infimum. Denote $a:=\inf a_n$. Let $\epsilon>0$, then
+    %$a-\epsilon<a_n$ for all $n\in\N$, or 
+    %\[-\epsilon<a_n-a\quad (\forall n\in\N).\]
+    %%
+    %\pause
+    %Moreover, there is an $N\in\N$ such that $a+\epsilon>a_N$.
+    %Since $(a_n)$ is decreasing, $a_n\leq a_N$ for all $n\geq N$. Thus
+    %\[a_n-a\leq a_N-a<\epsilon, \quad (\forall n\geq N)\]
+    %%
+    %\pause
+    %This means that $\abs{a_n-a}<\epsilon$ for all $n\geq N$.
+    %\pause
+    %Thus $\boxed{\lim a_n=a}$.
+  %\end{proof}
+%\end{frame}
+
+
+% <==
+% ==> Bolzano-Weierstrass
+%\begin{frame}{Bolzano--Weierstrass theorem}
+  %\begin{definition}
+    %Let $(a_n)$ be sequence, and let $n_1<n_2<n_3<\cdots$
+    %be an increasing sequence of positive integers. Then the sequence
+    %\[
+      %(a_{n_k}):~ a_{n_1},a_{n_2},a_{n_3},\dots
+    %\]
+    %is called a \emph{subsequence} of $(a_n)$.
+  %\end{definition}
+  %\pause
+  %We present the amazing theorem
+  %\pause
+  %\begin{theorem}[Bolzano--Weierstrass]
+    %Any bounded sequence has a convergent subsequence.
+  %\end{theorem}
+%\end{frame}
+%\begin{frame}{Bolzano--Weierstrass theorem}
+  %\begin{block}{Proof.}
+    %We say that $a_m$ is a \emph{peek} term of $(a_n)$
+    %if $a_m\geq a_n$ for all $n\geq m$.
+    %\pause
+    %Now, we have two cases to consider:\\[0.3cm]
+    %\pause
+    %%
+    %\textbf{Case 1: } If there are infinitely many peek terms; \pause
+    %then we let $a_{n_1}, a_{n_2}, a_{n_3},\dots$ be those peek terms. 
+    %We obtain that $(a_{n_k})$ be an decreasing sequence, and it's bounded.
+    %Thus by monotone convergence theorem, $(a_{n_k})$ converges.
+    %%
+  %\end{block}
+%\end{frame}
+%\begin{frame}[plain]{}
+  %\begin{proof}[(continued)]
+    %\textbf{Case 2: } If there are only finitely many peek terms; \pause
+    %then we can let $a_m$ be the last peek term, and let $n_1=m+1$. \pause
+    %Then there must exist an $n_2>n_1$ such that $a_{n_1}<a_{n_2}$, \pause
+    %if otherwise we would obtain that $a_{n_1}$ be another peek term,
+    %which is a contradiction because we are assuming that $a_m$ be 
+    %the last peek term.\\[0.2cm]
+    %%
+    %\pause
+    %Preceeding this procedure, we found $n_1<n_2<n_3<\cdots$ such that
+    %\[a_{n_1}<a_{n_2}<a_{n_3}<\cdots\]
+    %\pause
+    %Thus, $(a_{n_k})$ is an increasing sequence and it's bounded.
+    %Hence by monotone convergence theorem, we conclude that the subsequence
+    %$a_{n_k}$ converges.
+  %\end{proof}
+%\end{frame}
+% <==
+% ==> cauchy
+\begin{frame}{Cauchy Sequence}
+  Now for the part we've been waiting for.
+  We introduce
+  \pause
+  \begin{definition}[Cauchy Sequence]
+    The sequence $(a_n)$ is called a \emph{Cauchy sequence} if 
+    $\forall \epsilon>0,~ \exists N\in\N$ such that
+    if $n,m\geq N$, then $\abs{a_n-a_m}<\epsilon$.
+  \end{definition}
+  \pause
+  Our goal is to show that any Cauchy sequence converges. We'll break it
+  into two little chunks.
+  \pause
+  For the remaining of this section, we denote $(a_n)$ be a Cauchy sequence.
+\end{frame}
+\begin{frame}{Cauchy sequence is bounded}
+  \begin{lemma}
+    Cauchy sequence is bounded.
+  \end{lemma}
+  \pause
+  \begin{proof}
+    We choose $\epsilon=1$ in the definition of Cauchy sequence to obtain
+    that there's an $N\in\N$ such that (choose $m=N$)
+    \begin{align*}
+      &\abs{a_n-a_N}<1, \quad (\forall n\geq N)\\\implies
+      &\abs{a_n}<1+\abs{a_N}
+    \end{align*}
+    \pause
+    Then we denote 
+    $M=\max\left\{\abs{a_1},\abs{a_2},\dots,\abs{a_{N-1}}, 1+\abs{a_N}\right\}$,
+    \pause
+    therefore, $\abs{a_n}\leq M$ for all $n\in\N$.
+  \end{proof}
 \end{frame}
 
 \begin{frame}
-  From this ordering properties, we can prove the following:
-  \begin{lemma}
-    Let $a,b,c\in\R$.
-    \begin{itemize}
-      \item then $a>b$ or $a=b$ or $a<b$.
-      \item if $a>b$, then $a+c>b+c$.
-      \item if $a>b$ and $b>c$, then $a>c$.
-      \item if $a>b$ and $c>0$, then $ac>bc$.
-      \item if $a>b$ and $c<0$, then $ac<bc$.
-    \end{itemize}
-  \end{lemma}
-\end{frame}
-
-% <==
-% ==> completeness
-% ==> bouned
-\section{Completeness Property}
-\begin{frame}{Completeness}
-  Up until this point, the set $\R$ still behaves like $\Q$,
-  namely $\R$ is an odered field just like $\Q$. How do we make
-  $\R$ \emph{better} than $\Q$ ?
-
-  \begin{definition}
-    Let $A\subset\R$. We call
-    \begin{itemize}
-      \item $A$ is bounded above if $\exists M\in\R$ st $a\leq M$ for all $a\in A$.
-      \item $A$ is bounded below if $\exists m\in\R$ st $m\leq a$ for all $a\in A$.
-      \item $A$ is bounded if $A$ is both bounded above and below, i.e.
-        $\exists M>0$ st $\abs{a}\leq M$ for all $a\in A$.
-    \end{itemize}
+  Now we know that $(a_n)$ is bounded. What can we say about bounded sequence?
+  We borrow a theorem called \emph{Bolzano Weierstrass} theorem.
+  \begin{definition}[Subsequence]
+    Let $n_1<n_2<n_3<\cdots$ be increasing sequence of integers.
+    We call $(a_{n_k})$ a subsequence of $(a_n)$.
   \end{definition}
-
-  We call $M,m$ the upper bound and lower bound 
-  of $A$, respectively.
-  The \emph{Completeness} property of $\R$ states that
+  \begin{theorem}[Bolzano-Weierstrass]
+    Any bounded sequence has a convergent subsequence.
+  \end{theorem}
 \end{frame}
-% <==
-% ==> AoC
-\begin{frame}[b]
-  \begin{block}{Axiom of Completeness -- (AoC)}
-    Let $A\subset\R$. If $A$ is bounded above, 
-    then $A$ has \emph{least upper bound.}
-  \end{block}
-  This axiom is a mathematical way to say that $\R$ has no gaps.
-  It also applies to sets that are bouned below.
 
-  \begin{corollary}
-    Let $B\subset\R$. If $B$ is bouned below, 
-    then $B$ has greatest lower bound.
-  \end{corollary}
-
-  We denote the 
-  \begin{itemize}
-    \item least upper bound of $A$ by $\sup A$ 
-    \item greatest lower bound of $A$ by $\inf A$
-  \end{itemize}
-  
-\end{frame}
-% <==
-% ==> application
-\begin{frame}{}
-  \begin{lemma}
-    There is $x\in\R$ such that $x^2=2$.
-  \end{lemma}
-  \begin{proof}
-    Consider the set $S=\{x\in\R~:~ x^2\leq 2\}$. This set is clearly
-    bouned above. Hence by AoC, $S$ has supremum. Let $s=\sup S\in\R$.
-    We claim that $s^2=2$. From ordering property of $\R$, one of the
-    following must true
-    \[s^2<2, \quad\text{or}\quad s^2>2, \quad\text{or}\quad s^2=2.\]
+\begin{frame}{Completeness of $\R$}
+  \begin{theorem}[Completeness of $\R$]
+    Any Cauchy sequence converges.
+  \end{theorem}
+  \pause
+  \begin{block}{Proof.}
+    From the above lemma $(a_n)$ is bounded, then it has a convergent
+    subsequence (from Bolzano-Weierstrass). Suppose that 
+    $(a_{n_k})$ be that convergent subsequence
+    whose limit is $\lim a_{n_k}=a$. \\[0.3cm]
+    \pause
     %
-    \textbf{Case } if $s^2<2$:
+    Let an $\epsilon>0$, then there is $N\in\N$ such that
+    $\abs{a_n-a_m}<\frac{\epsilon}{2}$ whenever $n,m\geq N$.
+    \pause
+    Because $(a_{n_k})\to a$ and $(n_k)$ is increasing, then
+    there's $n_{k_0}>N$ such that 
+    $\abs{a_{n_k}-a}<\frac{\epsilon}{2}$ whenever $k>k_0$.
+  \end{block}
+\end{frame}
+\begin{frame}
+  \begin{proof}[(continued.)]
+    We obtain that for any $n\geq N$,
+    \begin{align*}
+      \abs{a_n-a}
+      &\leq \abs{a_n-a_{n_k}}+\abs{a_{n_k}-a}\\
+      &<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon.
+    \end{align*}
+    \pause
+    Thus $\lim a_n=a$. This completes the proof.
   \end{proof}
 \end{frame}
 % <==
+% ==> advantage of completeness
+\begin{frame}{What Does Completeness Mean?}
+  Completeness of $\R$ is quite nice for it tells us that
+  any Cauchy sequence has to have a limit in  $\R$.
+  For instance, take the sequence
+  \[a_n=1+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\cdots+\frac{1}{n^2}.\]
+  It's hard to prove that this sequence converges by guessing its limit.
+  On the other hand, it's rather quite easy to prove it's a Cauchy sequence
+\end{frame}
+% <==
 
+% <==
+% ==> density
+\section{Density of $\Q$ in $\R$}
+\begin{frame}[plain]
+  \begin{center}
+    {\huge\color{blue} Density of $\Q$ in $\R$}
+  \end{center}
+\end{frame}
+% ==> lim q_n=x
+\begin{frame}{Density in language of sequence}
+  Recall the Archimedean property that for any given $x\in\R$, 
+  then there's an integer $n$ such that $n\geq x$.
+  \pause
+  In class, we've already exposed to the idea that $\Q$ is dense
+  in $\R$. Today we're going to present the same thing but with
+  different language.
+  \pause
+  \begin{theorem}
+    Given any $x\in\R$, then there's a sequence $(q_n)\subset\Q$
+    of rationals such that $\lim q_n=x$.
+  \end{theorem}
+\end{frame}
+\begin{frame}
+  \begin{block}{Proof.}
+    The idea is to construct $(q_n)$. \pause
+    Now for each $n\in\N$, notice the number $(xn-1)$ and $(xn+1)$ are 2 units apart,
+    \pause
+    thus there must be an integer $k\in\Z$ satisfying
+    $xn-1<k<xn+1$, or equivalently
+    \[x-\frac{1}{n}<\frac{k}{n}<x+\frac{1}{n}.\]
+    \pause
+    Without any doubt, we immediately denote $q_n:=\frac{k}{n}$, 
+    thus we have constructed $(q_n)$ such that $\abs{q_n-x}<\frac{1}{n}$. 
+    \pause
+    With this sequence $(q_n)$ so constructed, we claim that its limit
+    is exactly $x$.
+  \end{block}
+\end{frame}
+\begin{frame}
+  \begin{proof}[(continued.)]
+    Let an $\epsilon>0$.\pause 
+    From Archimedean property, we're pretty sure
+    that there's an $N\in\N$ satisfying $N\geq\frac{1}{\epsilon}$.
+    \pause
+    Thus for any $n\geq N$, we obtain that
+    \[ \abs{q_n-x}<\frac{1}{n}\leq\frac{1}{N}\leq\epsilon. \]
+    This shows that $\lim q_n=x$ as advertised.
+  \end{proof}
+\end{frame}
+% <==
+% ==> density1 <=> density2
+\begin{frame}{Density 1 $\iff$ Density 2}
+  Right now, we have ways to state the density of $\Q$
+  in $\R$. They are
+  \pause
+  \begin{theorem}[Density 1]
+    Given any $x,y\in\R$ with $x<y$, then there exists a
+    $q\in\Q$ such that $x<q<y$.
+  \end{theorem}
+  \pause
+  \begin{theorem}[Density 2]
+    Given any $x\in\R$, then there is a $(q_n)\subset\Q$
+    such that $\lim q_n=x$.
+  \end{theorem}
+  \pause
+  We have proved these two theorems independently by invoking
+  the Archimedean property. 
+  \pause
+  We now will prove that these two
+  are in fact equivalent. Namely, 
+  \begin{center}
+    Density 1 $\iff$ Density 2
+  \end{center}
+\end{frame}
+\begin{frame}
+  \begin{proof}[Proof. (Density 1 $\implies$ Density 2)]
+    \pause
+    The idea is the same, try to construct $(q_n)$. For each
+    $n\in\N$, we could find $q_n\in\Q$ such that 
+    $x<q_n<x+\frac{1}{n}$ (by Density 1).\\[0.3cm]
+    \pause
+    %
+    Thus we have constructed $(q_n)$ such that 
+    $\abs{q_n-x}<\frac{1}{n}$ for each $n\in\N$.
+    \pause
+    Using the same argument as the above proof, we could safely 
+    conclude that $\lim q_n=x$ as expected.
+  \end{proof}
+\end{frame}
+\begin{frame}[plain]
+  \begin{proof}[Proof. (Density 2 $\implies$ Density 1)]
+    \pause
+    Let $x,y\in\R$ with $x<y$. Then by Density 2, we're sure that
+    there's $(q_n)\subset\Q$ such that $\lim q_n=\frac{x+y}{2}$.
+    \pause
+    Let $r:=\frac{y-x}{2}>0$. 
+    \pause
+    \begin{center}
+      \begin{tikzpicture}
+        \def\tick{0.1}
+        \draw (-2.2,0)--(2.2,0);
+        \draw (0,-\tick)--(0,\tick) node[above]{$\frac{x+y}{2}$};
+        \draw (-2,-\tick)--(-2,0) node[above]{$x$};
+        \draw (2,-\tick)--(2,0) node[above]{$y$};
+        \draw (-1.2,-\tick)--(-1.2,0)node[above]{$q_N$};
 
-
-
-
+        \draw[|-|] (-2,-0.5)--(0,-0.5);
+        \node[below] at (-1,-0.5) {$r$};
+      \end{tikzpicture}
+    \end{center}
+    \pause
+    Then there exists $N\in\N$ such that
+    \begin{align*}
+      \abs*{q_N-\frac{x+y}{2}}&<r\\
+      \implies -r+\frac{x+y}{2}<q_N&<r+\frac{x+y}{2}\\
+      \implies x<q_N&<y.
+    \end{align*}
+  \end{proof}
+\end{frame}
+% <==
 % <==
 % ==> why R
-\section{Why do Analysis on $\R$}
+% ==> resource
+% https://www.dpmms.cam.ac.uk/~wtg10/reals.html
+% https://math.stackexchange.com/questions/1762147/why-do-we-study-real-numbers
+% https://people.math.harvard.edu/~ctm/home/text/class/harvard/114/14/html/home/course/course.pdf
+% <==
+\section{Why Real Numbers?}
+\begin{frame}[plain]
+  \begin{center}
+    {\huge\color{blue} Why Real Numbers?}
+  \end{center}
+\end{frame}
 \begin{frame}{Why study on $\R$}
-  As we mentioned above, we can't do analysis on $\Q$
-  because some numbers simply don't exist in $\Q$.\\[0.3cm]
+  Why do we bother to extend from $\Q$ to $\R$
+  anyway? Well in real analysis, we would like to have 
+  a rigorous way to the study of calculus. Namely, we
+  need a \emph{good} definition of integral, differentiability,
+  convergence, etc ... .
+  \pause
+  It turns out these objects were tied tightly to
+  the concept of limit.\\[0.3cm]
+\end{frame}
+\begin{frame}{$\R$ is complete}
+  How to study limit? The most convenient way is to study the limit
+  of convergent sequences. \pause
+  In $\R$, if a convergent sequence $(r_n)\subset\R$ then its 
+  limit is closed, i.e. $\lim r_n\in\R$.
+  \pause
+  However, this is not always true in $\Q$. Take for instance
+  a rational sequence
+  \[1,  ~1.4, ~1.41, ~1.414, ~1.4142, ~1.41421, \dots \]
+  yet their limit is $\sqrt 2\not\in\R$.\\[0.3cm]
   %
-  \begin{enumerate}
-    \item allow us to do analysis
-    \item concept of limit is well behaved in $\R$
-    \item (need more ... )
-  \end{enumerate}
+  \pause
+  This is to say that $\R$ is complete, or to put it in another way,
+  every \emph{Cauchy} sequence converges.
 \end{frame}
 % <==
-% ==> rational converges to real
-\section{Some important results}
-\begin{frame}{Rational and real numbers}
-  \begin{theorem}
-    For any real number $x$, there is a sequence $(x_n)$ 
-    of rationals such that $x_n\neq x$ for all $n\in\N$
-    and \[\lim x_n=x.\]
-  \end{theorem}
-
-  To prove this theorem, we use the fact that $\Q$ is
-  dense in $\R$. That is, for any two real numbers $x,y\in\R$
-  where $x<y$, there exists a rational $r\in\Q$ such that
-  $x<r<y$.
+% ==> ref
+\section{Referrences}
+\begin{frame}[plain]
+  \begin{center}
+    {\huge\color{blue} Referrences}
+  \end{center}
 \end{frame}
-
-\begin{frame}[b]
-  \begin{proof}
-    Let $x\in\R$. We wish to construct $(x_n)\subset\Q$ 
-    such that $x_n\to x$.
-    Because $\Q$ is dense in $\R$, then for each $n\in\N$
-    we can find $x_n\in\Q$ such that $x<x_n<x+\frac{1}{n}$.\\[0.3cm]
-    %
-    We claim that $(x_n)$ does converge to $x$, and hence proved the
-    theorem.\\[0.3cm]
-    %
-    Let $\epsilon>0$. Using Archimedean property, we can find $N\in\N$
-    for which $N>\frac{1}{\epsilon}$. Now for any $n\geq N$, and because
-    $x_n\in (x,x+\frac{1}{n})$ we then obtain that
-    \[
-      \abs{x_n-x}<\frac{1}{n}\leq\frac{1}{N}<\epsilon.
-    \]
-    Thus $x_n\to x$ as required.
-  \end{proof}
+\begin{frame}{Referrences}
+  (working on it).
 \end{frame}
-
-
 % <==
-
-
 
 
 \end{document}

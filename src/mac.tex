@@ -69,9 +69,9 @@
 \definecolor{Ftext}{RGB}{0,0,0}
 \definecolor{Fenum}{RGB}{20, 70, 100}
 
-\definecolor{StdTitle}{RGB}{26, 33, 141}
+%\definecolor{StdTitle}{RGB}{26, 33, 141}
 \definecolor{Descitem}{RGB}{20, 70, 100}
-%\definecolor{StdTitle}{RGB}{20, 70, 100}
+\definecolor{StdTitle}{RGB}{20, 70, 100}
 \definecolor{StdBody}{RGB}{213,24,0}
 
 \definecolor{AlTitle}{RGB}{255, 190, 190}
@@ -95,7 +95,7 @@
 
 % Standard block
 \setbeamercolor{block title}{fg = Descitem, bg = StdTitle!15!white}
-\setbeamercolor{block body}{bg = StdBody!12!white}
+\setbeamercolor{block body}{bg = orange!30}
 
 % Alert block
 \setbeamercolor{block title alerted}{bg = AlTitle}
@@ -127,16 +127,16 @@
   \begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
     \pgfsetlinewidth{0.28mm}
     \color{gray!70!blue}
-    \pgfline{\pgfpoint{-3 mm}{1mm}}{\pgfpoint{10.125 cm}{1mm}}
+    \pgfline{\pgfpoint{-3 mm}{1mm}}{\pgfpoint{11 cm}{1mm}}
   \end{pgfpicture}}
 }
 \setbeamertemplate{headline}[text line]{\LogoLine}
 % <==
 % ==> logo
-\setbeamertemplate{sidebar canvas right}{
-  \vspace*{0 pt}\hspace*{-42 pt}%
-  {\includegraphics[height=40 pt]{../pic/mac.jpg}}
-}
+%\setbeamertemplate{sidebar canvas right}{
+  %\vspace*{0 pt}\hspace*{-42 pt}%
+  %{\includegraphics[height=40 pt]{../pic/mac.jpg}}
+%}
 % <==
 % ==> adjust title
 \setbeamertemplate{frametitle}{
@@ -168,9 +168,9 @@
 \newcommand{\TitleLine}{%
 \raisebox{-12mm}[0pt][0pt]{%
 \begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
-\pgfsetlinewidth{0.10mm}
+\pgfsetlinewidth{0.2mm}
 \color{gray}
-\pgfline{\pgfpoint{55mm}{0mm}}{\pgfpoint{55mm}{50mm}}
+\pgfline{\pgfpoint{45mm}{0mm}}{\pgfpoint{45mm}{50mm}}
 \end{pgfpicture}}}
 
 \newcommand{\MyTitle}{%
@@ -189,12 +189,12 @@
 
 % Institute
 \newcommand{\MyInstitute}{
-\hspace*{60mm}\vspace{-25mm}
+\hspace*{60mm}\vspace{-30mm}
 \centering \footnotesize \textit{\insertinstitute}}
 
 % Date
 \newcommand{\MyDate}{
-\hspace*{60mm}\vspace{-25mm}
+\hspace*{60mm}\vspace{-30mm}
 \centering \insertdate}
 
 
@@ -203,7 +203,7 @@
 \pgfdeclareimage[width = 0.20\paperwidth]{big}{../pic/mac.jpg}
 
 \setbeamertemplate{title page}{\TitleLine
-\hspace*{11mm}\vspace*{-60mm}
+\hspace*{5mm}\vspace*{-60mm}
 \begin{beamercolorbox}[wd=0.5\paperwidth,ht=0.13\paperwidth]{Title}
 \pgfuseimage{big}
 \end{beamercolorbox}

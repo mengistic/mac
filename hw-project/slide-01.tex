@@ -1,0 +1,274 @@
+\documentclass{beamer}
+% ==> preamble
+\input{../src/mac.tex}
+\def\Rp{\mathbb{R}^{+}}
+
+\usepackage{multicol}
+\title{Properties of Real Numbers}
+\author{Jeng Inger, Hun Sivmeng}
+\date{14 March 2022}
+% <==
+
+
+\begin{document}
+
+% ==> title
+\begin{frame}
+  \maketitle
+\end{frame}
+\begin{frame}[b]
+  \tableofcontents
+\end{frame}
+% <==
+% ==> intro
+\section{Introduction}
+\begin{frame}{Discussion}
+  Suppose we want to solve $x^2-2=0$ in the field $\Q$.
+  It turns out that this equation has no roots in $\Q$.
+  So we need to extend this field to a new one --- 
+  a \emph{better} one, called the set of real numbers and
+  is denoted by $\R$.\\[0.3cm]
+  %
+  What are the properties of this new set $\R$, and how
+  do we extend this exactly? \\[0.3cm]
+  %
+  But before we proceed, we ask the audience to forget
+  all the properties of $\R$ we learned in highschool 
+  because we're going to start from the bottom up.\\[0.3cm]
+  %
+  First, because $\R$ is an extension of $\Q$, thus $\R$
+  must inherit all the properties of $\Q$.
+  %
+  %We already know the set $\Q$ of rational numbers.
+  %However, it turns out that not all numbers are rational
+  %(take $\sqrt 2$ for instance.)\\[0.3cm]
+  %%
+  %So we need to extend $\Q$ to a new and bigger set.
+  %We call the new set $\R$ --- the set of real numbers. 
+  %What properties should this new set have? \\[0.3cm]
+  %%
+  %Following slides, we present the properties of $\R$.
+  %First, because $\Q$ is an ordered field, so must be $\R$.
+\end{frame}
+% <==
+% ==> algebraic
+\section{Algebraic Properties}
+% ==> addition
+\begin{frame}{Algebraic Properties}
+  The set $\R$ has the following algebraic properties:
+  \begin{block}{Algebraic Properties (Addition)}
+    \begin{enumerate}
+      \item \textit{(closed):}
+        $a+b\in\R$
+      \item \textit{(commutative):}
+        $a+b=b+a$
+      \item \textit{(associative):}
+        $a+(b+c)=(a+b)+c$
+      \item \textit{(additive identity):}
+        $\exists 0\in\R,\forall a\in\R:~ 0+a=a$
+      \item \textit{(additive inverse):}
+        $\forall a\in\R,~\exists a'\in\R:~ a+a'=0$.
+    \end{enumerate}
+  \end{block}
+\end{frame}
+% <==
+% ==> multiplication
+\begin{frame}
+  \begin{block}{Algebraic Properties (Multiplication)}
+    \begin{enumerate}
+      \item \textit{(closed):}
+        $ab\in\R$
+      \item \textit{(commutative):}
+        $ab=ba$
+      \item \textit{(associative):}
+        $a(bc)=(ab)c$
+      \item \textit{(multiplicative identity):}
+        $\exists 1\in\R,\forall a\in\R:~ a\cdot 1=a$
+      \item \textit{(multiplicative inverse):}
+        $\forall a\in\R,a\neq 0,~\exists a^{*}\in\R:~ aa^{*}=1$
+      \item \textit{(distributive law): }
+        $a(b+c)=ab+bc$.
+    \end{enumerate}
+  \end{block}
+  Thus, $\R$ is a field with two operations, namely 
+  \textit{addition} and \textit{multiplication}.
+\end{frame}
+% <==
+% ==> application
+\begin{frame}
+  From this algebraic properties, we can prove the basic arithmetic
+  we learned in highschool with ease. 
+  \begin{lemma}
+    \begin{itemize}
+      \item additive identity/inverse is unique
+      \item multiplicative identity/inverse is unique
+      \item $x+a=y+a \iff x=y$
+      \item $a\cdot 0=0$
+      \item $-a=(-1)\cdot a$
+      \item $ab=0 \iff a=0\text{ or }b=0$
+    \end{itemize}
+  \end{lemma}
+\end{frame}
+% <==
+% <==
+% ==> ordering
+\section{Ordering Properties}
+\begin{frame}{Ordering Properties}
+  There is a non-empty subset of $\R$, called
+  the set of positive real numbers which is denoted
+  by $\Rp$. This set has the properties:
+  %
+  \begin{block}{Ordering Properties}
+    \begin{itemize}
+      \item if $a\in\R$, then $a\in\Rp$ or $a=0$ or $-a\in\Rp$;
+      \item if $a,b\in\Rp$ then $a+b\in\Rp$;
+      \item if $a,b\in\Rp$ then $ab\in\Rp$.
+    \end{itemize}
+  \end{block}
+
+  We then define relations $<,~\leq,~>$ and $~\geq$  as follows: 
+  \begin{itemize}
+    \item $a>b$ whenever $a-b\in\Rp$;
+    \item $a\geq b$ whenever $a>b$ or $a=b$;
+    \item $b<a$ whenever $a>b$;
+    \item $b\leq a$ whenever $a\geq b$;
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  From this ordering properties, we can prove the following:
+  \begin{lemma}
+    Let $a,b,c\in\R$.
+    \begin{itemize}
+      \item then $a>b$ or $a=b$ or $a<b$.
+      \item if $a>b$, then $a+c>b+c$.
+      \item if $a>b$ and $b>c$, then $a>c$.
+      \item if $a>b$ and $c>0$, then $ac>bc$.
+      \item if $a>b$ and $c<0$, then $ac<bc$.
+    \end{itemize}
+  \end{lemma}
+\end{frame}
+
+% <==
+% ==> completeness
+% ==> bouned
+\section{Completeness Property}
+\begin{frame}{Completeness}
+  Up until this point, the set $\R$ still behaves like $\Q$,
+  namely $\R$ is an odered field just like $\Q$. How do we make
+  $\R$ \emph{better} than $\Q$ ?
+
+  \begin{definition}
+    Let $A\subset\R$. We call
+    \begin{itemize}
+      \item $A$ is bounded above if $\exists M\in\R$ st $a\leq M$ for all $a\in A$.
+      \item $A$ is bounded below if $\exists m\in\R$ st $m\leq a$ for all $a\in A$.
+      \item $A$ is bounded if $A$ is both bounded above and below, i.e.
+        $\exists M>0$ st $\abs{a}\leq M$ for all $a\in A$.
+    \end{itemize}
+  \end{definition}
+
+  We call $M,m$ the upper bound and lower bound 
+  of $A$, respectively.
+  The \emph{Completeness} property of $\R$ states that
+\end{frame}
+% <==
+% ==> AoC
+\begin{frame}[b]
+  \begin{block}{Axiom of Completeness -- (AoC)}
+    Let $A\subset\R$. If $A$ is bounded above, 
+    then $A$ has \emph{least upper bound.}
+  \end{block}
+  This axiom is a mathematical way to say that $\R$ has no gaps.
+  It also applies to sets that are bouned below.
+
+  \begin{corollary}
+    Let $B\subset\R$. If $B$ is bouned below, 
+    then $B$ has greatest lower bound.
+  \end{corollary}
+
+  We denote the 
+  \begin{itemize}
+    \item least upper bound of $A$ by $\sup A$ 
+    \item greatest lower bound of $A$ by $\inf A$
+  \end{itemize}
+  
+\end{frame}
+% <==
+% ==> application
+\begin{frame}{}
+  \begin{lemma}
+    There is $x\in\R$ such that $x^2=2$.
+  \end{lemma}
+  \begin{proof}
+    Consider the set $S=\{x\in\R~:~ x^2\leq 2\}$. This set is clearly
+    bouned above. Hence by AoC, $S$ has supremum. Let $s=\sup S\in\R$.
+    We claim that $s^2=2$. From ordering property of $\R$, one of the
+    following must true
+    \[s^2<2, \quad\text{or}\quad s^2>2, \quad\text{or}\quad s^2=2.\]
+    %
+    \textbf{Case } if $s^2<2$:
+  \end{proof}
+\end{frame}
+% <==
+
+
+
+
+
+% <==
+% ==> why R
+\section{Why do Analysis on $\R$}
+\begin{frame}{Why study on $\R$}
+  As we mentioned above, we can't do analysis on $\Q$
+  because some numbers simply don't exist in $\Q$.\\[0.3cm]
+  %
+  \begin{enumerate}
+    \item allow us to do analysis
+    \item concept of limit is well behaved in $\R$
+    \item (need more ... )
+  \end{enumerate}
+\end{frame}
+% <==
+% ==> rational converges to real
+\section{Some important results}
+\begin{frame}{Rational and real numbers}
+  \begin{theorem}
+    For any real number $x$, there is a sequence $(x_n)$ 
+    of rationals such that $x_n\neq x$ for all $n\in\N$
+    and \[\lim x_n=x.\]
+  \end{theorem}
+
+  To prove this theorem, we use the fact that $\Q$ is
+  dense in $\R$. That is, for any two real numbers $x,y\in\R$
+  where $x<y$, there exists a rational $r\in\Q$ such that
+  $x<r<y$.
+\end{frame}
+
+\begin{frame}[b]
+  \begin{proof}
+    Let $x\in\R$. We wish to construct $(x_n)\subset\Q$ 
+    such that $x_n\to x$.
+    Because $\Q$ is dense in $\R$, then for each $n\in\N$
+    we can find $x_n\in\Q$ such that $x<x_n<x+\frac{1}{n}$.\\[0.3cm]
+    %
+    We claim that $(x_n)$ does converge to $x$, and hence proved the
+    theorem.\\[0.3cm]
+    %
+    Let $\epsilon>0$. Using Archimedean property, we can find $N\in\N$
+    for which $N>\frac{1}{\epsilon}$. Now for any $n\geq N$, and because
+    $x_n\in (x,x+\frac{1}{n})$ we then obtain that
+    \[
+      \abs{x_n-x}<\frac{1}{n}\leq\frac{1}{N}<\epsilon.
+    \]
+    Thus $x_n\to x$ as required.
+  \end{proof}
+\end{frame}
+
+
+% <==
+
+
+
+
+\end{document}
